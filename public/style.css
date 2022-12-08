@@ -1,0 +1,63 @@
+body {
+    background: rgb(185,148,193);
+    background: radial-gradient(circle, rgba(185,148,193,1) 0%, rgba(125,103,157,1) 26%, rgba(119,74,145,1) 43%, rgba(23,4,43,1) 85%);
+    color: #13e600;
+
+    text-align: center;
+}
+.glow {
+    padding-top: 2rem;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0ce600, 0 0 40px #13e600, 0 0 50px #0ce600, 0 0 60px #00e613, 0 0 70px #1be600;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #4dff5c, 0 0 40px #56ff4d, 0 0 50px #4dff5c, 0 0 60px #4dff62, 0 0 70px #4dff50, 0 0 80px #4dff7a;
+    }
+  }
+
+img {
+  height: 70px; 
+  margin-right: 2rem;
+}
+.inputs{
+    margin-top: 2.8rem;
+    margin-bottom: 2.8rem;
+}
+    .inputs form{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        
+        
+    }
+        .inputs .form-group input{
+            border: none;
+            background-color: rgb(128, 115, 133);
+            width: 15rem;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.489), 0 0 10px #a8e9ad5a, 0 0 8px #4dff5c45, 0 0 8px #4dff7a66;
+
+        }
+        .inputs .form-group label{
+            margin-bottom: 0.2rem;
+            color: white;
+            text-shadow: 0 0 10px #fff, 0 0 10px #4dff5c7f, 0 0 8px #4dff5c87, 0 0 8px #4dff7a78;
+        }
+
+.productListItem{
+  width: 10rem;
+}
+.productListItem li{
+  background-color: none;
+  
+}
