@@ -1,3 +1,5 @@
+// Used Before MONGODB
+
 // const express = require('express')
 // let productSchema = require('../schemas/productSchema')
 // const productTags = express.Router()

@@ -5,7 +5,7 @@ const bodyParser = require ('body-parser')
 const cors = require('cors');
 const exphbs = require('express-handlebars');
 const initMongoDB = require ('./mongoDB')
-const products = require ('./routes/products')
+const productData = require ('./data/productData')
 
 const app = express();
 
@@ -29,16 +29,15 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-app.use('/api/products', require('./Routes/products'));
 
 
 // Homepage Route
 app.get('/', (req, res) => res.render('index', {
     title: 'Product Creator',
-    products
+    productData
 })); 
 
-// Set static folder "Hello World" Ligger den över homepage så syns denna 
+// Set static folder *Sätter statisk CSS på Homepage Route
 app.use(express.static(path.join(__dirname, 'public')));
 
 // products API Routes

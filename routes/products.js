@@ -1,9 +1,8 @@
 const express = require('express');
-const { db } = require('../schemas/productSchema');
 const router = express.Router();
 const productSchema = require('../schemas/productSchema')
 
-
+//  Get all Products
 router.route('/').get(async (req, res) => {
     const products = []
     const list = await productSchema.find()
@@ -22,7 +21,7 @@ router.route('/').get(async (req, res) => {
         }
         res.status(200).json(products)
     } else
-        res.status(400).json()
+        res.status(400).json({msg: `something went wrong`})
 })
 
 router.route('/:tag').get(async (req, res) => {
@@ -85,6 +84,7 @@ router.route('/product/details/:articleNumber').get(async (req, res) => {
 })
 
 // CRUD routes
+// Create Product
 router.route('/').post(async (req, res) =>{
     const {name, description, price, category, tag, imageName, rating} = req.body
 
